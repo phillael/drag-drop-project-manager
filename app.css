@@ -1,0 +1,239 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+
+:root {
+  --main-bg-gradient: radial-gradient(rgb(51, 51, 51), black);
+  --form-gradient: linear-gradient(to left, rgb(0, 0, 0), rgb(34, 38, 90));
+  --button-gradient: linear-gradient(to right, #2e6c96, #7bb5db);
+  --button-hover-gradient: linear-gradient(to right, #3982b3, #8dccf7);
+  --active-projects-gradient: linear-gradient(to right, #234d19, #68aa86);
+  --finished-projects-gradient: linear-gradient(to right, #183a6e, #8dc7f7);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  background-image: var(--main-bg-gradient);
+}
+
+footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  text-align: center;
+}
+
+.layout {
+  width: 70%;
+  margin: 0 auto;
+  /* min-width: 450px; */
+}
+
+form {
+  display: flex;
+  box-shadow: 5px 10px 25px #000000;
+}
+
+a {
+  color: white;
+}
+form p {
+  color: red;
+  font-size: 0.7rem;
+  margin: 0 0 0 1rem;
+}
+
+.form-inputs {
+  width: 50%;
+  margin: 0 1rem;
+}
+
+#user-input {
+  color: white;
+  margin: 1rem 0;
+  padding: 1rem;
+  /* border: 1px solid #ff0062; */
+  background-image: var(--form-gradient);
+  border-radius: 40px;
+}
+
+label,
+input,
+textarea {
+  display: block;
+  margin: 0.5rem 0;
+}
+
+label {
+  font-weight: bold;
+  font-size: larger;
+  margin: 1rem 1rem 0 1rem;
+}
+
+input,
+textarea {
+  font: inherit;
+  padding: 1rem 2rem;
+  color: rgb(68, 68, 68);
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  background-color: #ebebeb;
+}
+
+input,
+textarea,
+button,
+.projects,
+.projects li {
+  border-radius: 20px;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  background: #ceceff;
+}
+
+button {
+  font: inherit;
+  width: 50%;
+  background: var(--button-gradient);
+  border: none;
+  cursor: pointer;
+  color: white;
+  padding: 1rem;
+  margin: 0.5rem 1rem;
+  align-self: flex-end;
+  transition: 250ms all;
+}
+
+.main-title {
+  color: white;
+  text-align: center;
+  font-weight: 600;
+  font-size: 3rem;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:hover,
+button:active {
+  background: var(--button-hover-gradient);
+  transition: 250ms all;
+}
+
+.projects {
+  margin: 1rem 0;
+  border: 1px solid #d8ffdb;
+}
+
+.projects header {
+  background: var(--active-projects-gradient);
+  border-radius: 20px 20px 0 0;
+  height: 3.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#finished-projects {
+  border-color: #c1d2ff;
+}
+
+#finished-projects header {
+  background: var(--finished-projects-gradient);
+}
+
+.projects h2 {
+  margin: 0;
+  color: white;
+}
+
+.projects ul {
+  list-style: none;
+  margin: 0;
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  color: white;
+}
+
+.projects li {
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.26);
+  padding: 1rem;
+  margin: 1rem;
+  background: var(--form-gradient);
+}
+
+.projects li h2 {
+  color: #e7fff2;
+  margin: 0.5rem 0;
+}
+
+#finished-projects li h2 {
+  color: hsl(224, 100%, 89%);
+}
+
+.projects li h3 {
+  color: #ffffff;
+  font-size: 1rem;
+}
+
+.project li p {
+  margin: 0;
+}
+
+.droppable {
+  background: #a4c0b01e;
+  border-radius: 0 0 20px 20px;
+}
+
+#finished-projects .droppable {
+  background: #d6e1ff18;
+}
+
+@media (max-width: 650px) {
+  .layout {
+    width: 100%;
+  }
+  #user-input {
+    border-radius: 0;
+  }
+  .projects,
+  .projects header {
+    border-radius: 0;
+  }
+}
+
+@media (max-width: 1000px) {
+  .main-title {
+    font-size: 2rem;
+  }
+  form {
+    display: block;
+    text-align: center;
+  }
+  .form-inputs {
+    width: 100%;
+    margin: 0;
+    padding: 0 1rem;
+    text-align: left;
+  }
+
+  button {
+    width: 90%;
+    padding: 1rem;
+    margin: 1rem auto;
+  }
+}

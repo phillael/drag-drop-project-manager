@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>ProjectManager</title>
+    <link rel="stylesheet" href="app.css" />
+    <script type="module" src="dist/bundle.js"></script>
+  </head>
+  <body>
+    <div class="layout">
+      <h1 class="main-title">LLAMA MANAGEMENT SYSTEM</h1>
+      <template id="project-input">
+        <form>
+          <div class="form-inputs">
+            <div class="form-control">
+              <label for="title">Project Title</label>
+              <input type="text" id="title" />
+              <p id="title-validation"></p>
+            </div>
+            <div class="form-control">
+              <label for="description">Project Description</label>
+              <textarea id="description" rows="2"></textarea>
+              <p id="description-validation"></p>
+            </div>
+            <div class="form-control">
+              <label for="people">Number of Llamas assigned</label>
+              <input
+                placeholder="Enter a number between 1 and 100"
+                type="number"
+                id="people"
+              />
+              <p id="number-validation"></p>
+            </div>
+          </div>
+          <button type="submit">ADD PROJECT</button>
+        </form>
+      </template>
+      <template id="single-project">
+        <li draggable="true">
+          <h2></h2>
+          <h3></h3>
+          <p></p>
+        </li>
+      </template>
+      <template id="project-list">
+        <section class="projects">
+          <header>
+            <h2></h2>
+          </header>
+          <ul></ul>
+        </section>
+      </template>
+      <div id="app"></div>
+    </div>
+    <footer>
+      <p><a href="https://www.phillcodes.com">www🦙PhillCodes🦙com</a></p>
+    </footer>
+  </body>
+</html>
